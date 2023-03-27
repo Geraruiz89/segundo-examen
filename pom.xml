@@ -23,7 +23,7 @@
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/Geraruiz89/maven-repo</url>
+            <url>https://maven.pkg.github.com/geraruiz89/maven-repo</url>
         </repository>
     </repositories>
 
