@@ -1,4 +1,4 @@
-name: CD deploy-examen
+name: CD desarrollo-ejercicio
 
 on:
   workflow_dispatch:
@@ -6,12 +6,12 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'deploy-examen/**'
+      - 'desarrollo-ejercicio/**'
 
 jobs:
   
   deploy:
-    name: Deploy deploy-examen
+    name: Deploy desarrollo-ejercicio
     runs-on: ubuntu-latest
 
     steps:
@@ -26,12 +26,12 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.m2
-          key: deploy-examen/pom.xml
+          key: desarrollo-ejercicio/pom.xml
                       
-      - name: package Project deploy-examen
+      - name: package Project desarrollo-ejercicio
         run: |
            sed -i 's/password_token/${{ secrets.GHCR_PAT }}/g' settings.xml
-           mvn --settings settings.xml -f deploy-examen/pom.xml package
+           mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml package
            
       - name: Set up Docker Buildx
         id: buildx
@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
             # relative path to the place where source code with Dockerfile is located
-            context: ./deploy-examen/
+            context: ./desarrollo-ejercicio/
             # Note: tags has to be all lower-case
             tags: |
               ghcr.io/geraruiz89/segundo-examen:latest
