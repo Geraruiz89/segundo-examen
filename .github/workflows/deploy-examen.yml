@@ -1,4 +1,4 @@
-name: CD publish-access
+name: CD desarrollo-ejecicio
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'publisher-access/**'
+      - 'desarrollo-ejercicio/**'
 
 jobs:
   
@@ -26,13 +26,12 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.m2
-          key: publisher-${{ hashFiles('**/pom.xml') }}
+          key: desarrollo-${{ hashFiles('**/pom.xml') }}
                       
       - name: package Project publisher-access
         run: |
            sed -i 's/password_token/${{ secrets.GHCR_PAT }}/g' settings.xml
-           mvn --settings settings.xml -f publisher-access/pom.xml package
-           find . -name publisher-access-0.0.1-SNAPSHOT.jar
+           mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml package
            
       - name: Set up Docker Buildx
         id: buildx
@@ -42,16 +41,16 @@ jobs:
         uses: docker/login-action@v1
         with:
             registry: ghcr.io
-            username: ${{ github.actor }}
+            username: ${{ github.ACTOR }}
             password: ${{ secrets.GHCR_PAT }}
 
       - name: Build image and push to GitHub Container Registry
         uses: docker/build-push-action@v2
         with:
             # relative path to the place where source code with Dockerfile is located
-            context: ./publisher-access/
+            context: ./desarrollo-ejercicio/
             # Note: tags has to be all lower-case
             tags: |
-              ghcr.io/qbits-mx/dockerized-access:latest
+              ghcr.io/geraruiz89/dockerized-access:latest
             # build on feature branches, push only on main branch
             push: ${{ github.ref == 'refs/heads/main' }}
