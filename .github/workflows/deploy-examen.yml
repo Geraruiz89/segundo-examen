@@ -51,6 +51,6 @@ jobs:
             context: ./desarrollo-ejercicio/
             # Note: tags has to be all lower-case
             tags: |
-              ghcr.io/geraruiz89/dockerized-access:latest
+              ghcr.io/geraruiz89/segundo-examen-access:latest
             # build on feature branches, push only on main branch
             push: ${{ github.ref == 'refs/heads/main' }}
