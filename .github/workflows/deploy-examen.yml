@@ -11,7 +11,7 @@ on:
 jobs:
   
   deploy:
-    name: Deploy publish-access and cache all java dependency
+    name: Deploy deploy-examen
     runs-on: ubuntu-latest
 
     steps:
@@ -26,13 +26,12 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.m2
-          key: publisher-${{ hashFiles('**/pom.xml') }}
+          key: deploy-examen/pom.xml
                       
-      - name: package Project publisher-access
+      - name: package Project deploy-examen
         run: |
            sed -i 's/password_token/${{ secrets.GHCR_PAT }}/g' settings.xml
-           mvn --settings settings.xml -f publisher-access/pom.xml package
-           find . -name publisher-access-0.0.1-SNAPSHOT.jar
+           mvn --settings settings.xml -f deploy-examen/pom.xml package
            
       - name: Set up Docker Buildx
         id: buildx
@@ -49,9 +48,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
             # relative path to the place where source code with Dockerfile is located
-            context: ./publisher-access/
+            context: ./deploy-examen/
             # Note: tags has to be all lower-case
             tags: |
-              ghcr.io/qbits-mx/dockerized-access:latest
+              ghcr.io/geraruiz89/segundo-examen:latest
             # build on feature branches, push only on main branch
             push: ${{ github.ref == 'refs/heads/main' }}
