@@ -1,4 +1,4 @@
-name: CD publish-access
+name: CD deploy-examen
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'publisher-access/**'
+      - 'deploy-examen/**'
 
 jobs:
   
