@@ -31,7 +31,7 @@ jobs:
       - name: package Project publisher-access
         run: |
            sed -i 's/password_token/${{ secrets.GHCR_PAT }}/g' settings.xml
-           mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml package
+           mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml install
            
       - name: Set up Docker Buildx
         id: buildx
