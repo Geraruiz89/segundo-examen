@@ -1,0 +1,4 @@
+com.example.helloworld.productos.LoginServiceImpl#cadenaDeErrores([Z)Ljava/util/List;
+java.util.ArrayList#<init>()V
+com.example.helloworld.productos.LoginServiceImpl#getPassN()Ljava/lang/String;
+java.util.ArrayList#instance-init#

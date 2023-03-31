@@ -1,0 +1,33 @@
+
+ncom.example.helloworld.productos.LoginServiceImpl#cambia(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;Å
+w/home/ubuntu/development/code/desarrollo-ejercicio/src/main/java/com/example/helloworld/productos/LoginServiceImpl.java ("1*∆
+1   (˛
+˚
+   ($
+
+%0void"Ocom.example.helloworld.productos.LoginServiceImpl#setPassN(Ljava/lang/String;)V*Q
+
+__unknown_file (53
+1com.example.helloworld.productos.LoginServiceImpl*?
+
+__unknown_file (#
+!
+nuevoPasswordjava.lang.Stringë
+é
+! !( 
+%1java.util.List"\com.example.helloworld.productos.LoginServiceImpl#revisa(Ljava/lang/String;)Ljava/util/List;*Q
+
+__unknown_file (53
+1com.example.helloworld.productos.LoginServiceImpl*;
+
+__unknown_file (
+
+	tokenDadojava.lang.String""
+! !(!
+
+%1java.util.List:)
+ (0
+	tokenDadojava.lang.String:-
+1 (E!
+nuevoPasswordjava.lang.StringB53
+1com.example.helloworld.productos.LoginServiceImplH

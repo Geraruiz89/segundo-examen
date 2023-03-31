@@ -1,0 +1,7 @@
+organization=geras-mx
+projectKey=Gera_desarrollo_ejercicio
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.39607
+dashboardUrl=https://sonarcloud.io/dashboard?id=Gera_desarrollo_ejercicio
+ceTaskId=AYc55el4KIqMBF37Nhdd
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYc55el4KIqMBF37Nhdd

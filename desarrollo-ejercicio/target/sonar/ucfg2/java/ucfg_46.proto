@@ -1,0 +1,116 @@
+
+ocom.example.helloworld.productos.LoginServiceImpl#login(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+w/home/ubuntu/development/code/desarrollo-ejercicio/src/main/java/com/example/helloworld/productos/LoginServiceImpl.java ("3*õ
+2$ (*q
+o
+$ (>
+
+%1long"%java.lang.System#currentTimeMillis()J*0
+
+__unknown_file ("
+java.lang.Systemq
+o
++ (;
+%2java.lang.String"__concat*
++ (6
+	{'user':'*&
+7 (;
+
+userjava.lang.Stringp
+n
++ (H
+%3java.lang.String"__concat*$
++ (;
+
+%2java.lang.String*
+< (H
+
+', 'exp':'h
+f
++ (Y
+%4java.lang.String"__concat*$
++ (H
+
+%3java.lang.String*
+I (Y
+""…
+‚
++ (z
+%5java.lang.String"__concat*$
++ (Y
+
+%4java.lang.String*.
+Z (z" 
+', 'rol':'admin', 'pago':true}”
+‘
+ ({
+%6java.lang.String"dcom.example.helloworld.productos.LoginServiceImpl#base64encode(Ljava/lang/String;)Ljava/lang/String;*Q
+
+__unknown_file (5"3
+1com.example.helloworld.productos.LoginServiceImpl*4
+
+__unknown_file (
+
+%5java.lang.Stringf
+d
+ (|
+cadenotajava.lang.String"__id*4
+
+__unknown_file (
+
+%6java.lang.Stringm
+k
+ (!
+%7java.lang.String"__concat**
+ (
+
+cadenotajava.lang.String*
+ (!
+_‹
+ˆ
+$ (C
+%8java.lang.String"\com.example.helloworld.utilerias.Digestion#generateMd5(Ljava/lang/String;)Ljava/lang/String;*J
+
+__unknown_file (.",
+*com.example.helloworld.utilerias.Digestion*:
+
+__unknown_file (
+
+cadenotajava.lang.Stringz
+x
+ (C
+%9java.lang.String"__concat*$
+ (!
+
+%7java.lang.String*$
+$ (C
+
+%8java.lang.String"$
+ (D
+
+%9java.lang.String*é
+3 (Ñ
+Î
+ (/
+%0boolean"lcom.example.helloworld.productos.LoginServiceImpl#consultaBaseDeDatos(Ljava/lang/String;Ljava/lang/String;)Z*Q
+
+__unknown_file (53
+1com.example.helloworld.productos.LoginServiceImpl*6
+
+__unknown_file (
+
+userjava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String*
+2
+1*>
+1 (0"/
+ (1#!
+{'error':'bad pasword or user'}:$
+ ($
+userjava.lang.String:(
+% (4
+passwordjava.lang.StringB53
+1com.example.helloworld.productos.LoginServiceImplH

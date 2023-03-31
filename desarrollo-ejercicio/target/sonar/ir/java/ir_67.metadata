@@ -1,0 +1,3 @@
+com.example.helloworld.productos.LoginServiceImpl#cambia(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+com.example.helloworld.productos.LoginServiceImpl#revisa(Ljava/lang/String;)Ljava/util/List;
+com.example.helloworld.productos.LoginServiceImpl#setPassN(Ljava/lang/String;)V
