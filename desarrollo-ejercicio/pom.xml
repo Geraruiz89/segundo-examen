@@ -55,6 +55,13 @@
             <artifactId>HikariCP</artifactId>
         </dependency> 
     </dependencies>
+    
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/geraruiz89/maven-repo</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
