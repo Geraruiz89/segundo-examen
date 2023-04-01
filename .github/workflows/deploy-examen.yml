@@ -31,10 +31,15 @@ jobs:
       - name: package Project publisher-access
         run: |
            sed -i 's/password_token/${{ secrets.GHCR_PAT }}/g' settings.xml
+<<<<<<< HEAD
            mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml deploy
            mvn -B verify sonar:sonar -Dsonar.login=690331fada227b4a69f9bb106a06b956a752cb2b -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=geras-mx -Dsonar.projectKey=Gera_desarrollo_ejercicio
            env:
                GITHUB_TOKEN: ${{ secrets.GHCR_PAT }}
+=======
+           mvn --settings settings.xml -f desarrollo-ejercicio/pom.xml install
+           
+>>>>>>> parent of 220cabd... cambiando install por deploy en el pom
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
