@@ -1,7 +1,7 @@
 docker stop segundo-examen
 docker rm segundo-examen
 
-docker pull ghcr.io/Geraruiz89/segundo-examen-accessegundo-examen/target/armadors
+docker pull ghcr.io/geraruiz89/segundo-examen-access
 
 docker run -d \
 --name=segundo-examen \
